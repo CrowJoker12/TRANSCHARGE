@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TransCharge</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+        html {
+          scroll-behavior: smooth;
+        }
+        :target {
+          scroll-margin-top: 170px;
+        }
+        body{
+            background: #FFF;
+        }
+        #menu {
+            margin-top: -25px;
+            position: fixed;
+            background: #001b88;
+            color: #FFF;
+            height: 100px;
+            width: 1550px;
+            padding-left: px;
+            border-radius: 0px;
+        }
+        #menu ul, #menu li {
+            margin: 0 auto;
+            padding: 0;
+            list-style: none
+        }
+        #menu ul {
+            margin-left: 227px;
+            margin-top: 17px;
+            width: 100%;
+        }
+        #menu li {
+            float: left;
+            display: inline;
+            position: relative;
+        }
+        #menu a {
+            display: block;
+            line-height: 83px;
+            padding: 0 18px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        #menu li a:hover {
+            color: #001b88;
+            background: #FFF;
+        }
+        #menu input {
+            display: none;
+            margin: 0;
+            padding: 0;
+            height: 45px;
+            width: 100%;
+            opacity: 0;
+            cursor: pointer
+        }
+        #menu label {
+            display: none;
+            line-height: 45px;
+            text-align: center;
+            position: absolute;
+            left: 35px
+        }
+        #menu label:before {
+            font-size: 1.6em;
+            content: "\2261";
+            margin-left: 20px;
+        }
+        #menu ul.sub-menus{
+            height: auto;
+            overflow: hidden;
+            width: 170px;
+            background: #444444;
+            position: absolute;
+            z-index: 99;
+            display: none;
+        }
+        #menu ul.sub-menus li {
+            display: block;
+            width: 100%;
+        }
+        #menu ul.sub-menus a {
+            color: #FFFFFF;
+            font-size: 16px;
+        }
+        #menu li:hover ul.sub-menus {
+            display: block
+        }
+        #menu ul.sub-menus a:hover{
+            background: #F2F2F2;
+            color: #444444;
+        }
+        @media screen and (max-width: 800px){
+            #menu {position:relative}
+            #menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+            #menu ul.sub-menus {width:100%;position:static;}
+            #menu ul.sub-menus a {padding-left:30px;}
+            #menu li {display:block;float:none;width:auto;}
+            #menu input, #menu label {position:absolute;top:0;left:0;display:block}
+            #menu input {z-index:4}
+            #menu input:checked + label {color:white}
+            #menu input:checked + label:before {content:"\00d7"}
+            #menu input:checked ~ ul {display:block}
+        }
+        #info1{
+            color: #000;
+            margin-left: 435px;
+            text-align: justify;
+            width: 550px;
+        }
+        #info3{
+            color: #000;
+            margin-left: 180px;
+            margin-top: -20px;
+            text-align: justify;
+            width: 470px;
+            font-size: 30px;
+        }
+        #info1titulo{
+            color: #000;
+            font-size: 55px;
+            margin-left: 175px;
+            margin-top: 50px;
+        }
+        #info3titulo{
+            color: #000;
+            font-size: 70px;
+            margin-left: 178px;
+            margin-top: 200px;
+        }
+        #erro{
+            color: #000;
+            margin-left: 435px;
+            margin-top: 50px;
+            text-align: justify;
+            width: 550px;
+        }
+        #Cartaorecarga{
+            font-size: 40px;
+        }
+        #info5{
+            color: #000;
+            margin-left: 180px;
+            margin-top: -100px;
+            text-align: justify;
+            width: 350px;
+            font-size: 20px;
+        }
+        #info6{
+            color: #000;
+            margin-left: 560px;
+            margin-top: -143px;
+            text-align: justify;
+            width: 350px;
+            font-size: 20px;
+        }
+        #info7{
+            color: #000;
+            margin-left: 937px;
+            margin-top: -143px;
+            text-align: justify;
+            width: 350px;
+            font-size: 20px;
+        }
+        #info8{
+            color: #000;
+            margin-left: 180px;
+            margin-top: 100px;
+            text-align: justify;
+            width: 1109px;
+            font-size: 20px;
+        }
+        #emailtexto{
+            color: #000;
+            margin-left: 260px;
+            margin-top: -52px;
+            text-align: justify;
+            width: 1109px;
+            font-size: 20px;
+        }
+        #email{
+            margin-left: 180px;
+        }
+        #telefonetexto{
+            color: #000;
+            margin-left: 710px;
+            margin-top: -45px;
+            font-size: 20px;
+        }
+        #telefone{
+            margin-left: 395px;
+        }
+        #githubtexto{
+            color: #000;
+            margin-left: 1077px;
+            margin-top: -45px;
+            font-size: 20px;
+        }
+        #github{
+            margin-left: 290px;
+        }
+        #logo{
+            margin-left: 0px;
+            margin-top: -13px;
+        }
+        #botaorecarga{
+			color: #ffffff;
+			background-color: #001b88;
+			font-size: 20px;
+			border: 1px solid #001b88;
+			padding: 10px 20px;
+			text-transform: uppercase;
+			margin-top: 20px;
+		}
+		#botaorecarga:hover {
+			color: #001b88;
+			background-color: #ffffff;
+		}
+		.teste {
+		margin-left: 480px;
+		}
+    </style>
+    <style>
+        li, #info1, #info1titulo, #info2, #info2titulo, #info3, #info3titulo, #erro, #Cartaorecarga,
+        #info4, #info4titulo, #info5, #info6, #info7, #info8, #emailtexto, #telefonetexto,
+        #githubtexto, #botaorecarga{
+            font-family: 'Signika Negative', sans-serif;
+        }
+    </style>
+    <script>
+        function procurar() {
+            var link = document.getElementById('Cartaorecarga').value;
+            var url = "/";
+            var linktodo = url+link;
+            window.open(linktodo);
+        }
+    </script>
+</head>
+<body>
+    <nav id='menu'>
+      <input type='checkbox' id='responsive-menu' onclick='updatemenu()'>
+        <comment><img id="logo" src="https://i.imgur.com/RyiUjP0.png" width="300" height="150" align="left"></comment>
+          <div class="teste">
+              <ul>
+                <li><a href='#sessao1'>informações</a></li>
+                <li><a href='#sessao2'>recarga e consulta de saldo online</a></li>
+                <li><a href='#sessao3'>sobre</a></li>
+              </ul>
+          </div>
+    </nav>
+    <section id="sessao1">
+        <br><br><br><br>
+        <p id="info1titulo">Como fazer a Recarga e Consulta de Saldo Online?</p>
+        <p id="info1">
+            Nossa ferramenta de Recarga e Consulta Online consiste em buscar no Sistema as informações
+            do Banco de Dados para verificar a autenticidade do N° do Cartão informado,
+            e se cadastrado, você, cliente, poderá fazer uma recarga rápida e com praticidade ou
+            verificar o seu saldo com acuracidade.
+            <br><br>
+            1° Selecione a ferramenta Recarga e Consulta de Saldo Online<br>
+            2° Insira o seu N° de Cartão<br>
+            3° Verifique o seu saldo<br>
+            4º Se quiser, abra o app do seu banco em seu dispostivo móvel<br>
+            5° Leia o código QR que aparecerá na tela<br>
+            6º Insira a quantidade que você quer recarregar (R$10 ~ R$150)<br>
+            7° Confirme o pagamento<br>
+            8° Aguarde a sua recarga e pronto!
+        <p id="erro">
+            Em caso de erro, coloque os dados corretamente;<br>
+            Se os dados estiverem corretos, mas ainda cause erro, entre em contato
+            com transcharge@gmail.com para cadastro ou mais informações.
+        </p>
+        {% for x in clientes %}
+            {{x.nome}}<br>
+            {{x.cartao}}<br>
+            {{x.saldo}}<br><br>
+        {% endfor %}
+    </section>
+    <section id="sessao2">
+        <p id="info3titulo">Recarga e Consulta de Saldo Online</p>
+        <p id="info3">
+            Digite o N° do seu Cartão de Passe:<br>
+            <input type="text" id="Cartaorecarga" required><br>
+            <button id="botaorecarga" onclick="procurar()">Procurar</button>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </p>
+    </section>
+    <section id="sessao3">
+        <p id="info5">
+            MISSÃO<br>
+            Entregar uma maior facilidade de fazer a recarga dos cartões de ônibus,
+            com mais acomodação e um sistema totalmente confiável e de uso otimizado.
+        </p>
+        <p id="info6">
+            VISÃO<br>
+            Fazer com que os nossos clientes estejam mais acomodados, sem precisar
+            sair de casa, fazendo as recargas, momentaneamente, via PIX.
+        </p>
+        <p id="info7">
+            VALORES<br>
+            Qualidade, Otimização, Inovação, Ética.
+            <br><br><br>
+        </p>
+        <p id="info8">
+            POR QUE ESCOLHEMOS ESSE PROJETO?<br>
+            Notamos esse grande problema atual nos terminais de transporte coletivo que,
+            precisamos sempre estar com dinheiro em espécie para podermos recarregá-lo, além disso,
+            existem filas, demora e a hipótese de perder o ônibus.<br><br>
+            Com o TransCharge, poderá, sem sair de casa, verificar o saldo de seu cartão
+            e recarregá-lo na segurança da sua casa e de seu banco.
+            <br><br><br><br>
+        </p>
+        <img id="email" src="https://i.imgur.com/Ychfu6N.png" width="70px" height="70px">
+        <img id="telefone" src="https://i.imgur.com/tmGxHme.png" width="60px" height="60px">
+        <img id="github" src="https://i.imgur.com/AlZEaP3.png" width="60px" height="60px">
+        <p id="emailtexto">
+            transcharge@gmail.com
+        </p>
+        <p id="telefonetexto">
+            (47) 996091467
+        </p>
+        <p id="githubtexto">
+            github.com/CrowJoker12
+        </p>
+        <br><br><br><br>
+    </section>
+</body>
+</html>
