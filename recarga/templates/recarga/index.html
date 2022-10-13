@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TransCharge</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
@@ -9,7 +10,7 @@
           scroll-behavior: smooth;
         }
         :target {
-          scroll-margin-top: 170px;
+          scroll-margin-top: 150px;
         }
         body{
             background: #FFF;
@@ -109,9 +110,31 @@
             #menu input:checked + label:before {content:"\00d7"}
             #menu input:checked ~ ul {display:block}
         }
+        #banner-esq{
+            width: 120px;
+            height: 100%;
+            background-color: #001b88;
+            position: fixed;
+            margin-top: 75px;
+        }
+        #banner-dir{
+            width: 125px;
+            height: 100%;
+            background-color: #001b88;
+            position: fixed;
+            margin-left: 1387px;
+            margin-top: 75px;
+        }
+        #banner-bai{
+            width: 100%;
+            height: 60px;
+            background-color: #001b88;
+            position: fixed;
+            margin-top: 685px;
+        }
         #info1{
             color: #000;
-            margin-left: 435px;
+            margin-left: 185px;
             text-align: justify;
             width: 550px;
         }
@@ -137,7 +160,7 @@
         }
         #erro{
             color: #000;
-            margin-left: 435px;
+            margin-left: 185px;
             margin-top: 50px;
             text-align: justify;
             width: 550px;
@@ -224,8 +247,14 @@
 			background-color: #ffffff;
 		}
 		.teste {
-		margin-left: 480px;
-		}
+		    margin-left: 371px;
+        }
+        #branco{
+            margin-top: 50px;
+        }
+        @media screen and (max-width:500px) {
+            
+        }
     </style>
     <style>
         li, #info1, #info1titulo, #info2, #info2titulo, #info3, #info3titulo, #erro, #Cartaorecarga,
@@ -255,6 +284,9 @@
               </ul>
           </div>
     </nav>
+    <div id="banner-esq"></div>
+    <div id="banner-dir"></div>
+    <div id="banner-bai"></div>
     <section id="sessao1">
         <br><br><br><br>
         <p id="info1titulo">Como fazer a Recarga e Consulta de Saldo Online?</p>
@@ -315,7 +347,7 @@
             existem filas, demora e a hipótese de perder o ônibus.<br><br>
             Com o TransCharge, poderá, sem sair de casa, verificar o saldo de seu cartão
             e recarregá-lo na segurança da sua casa e de seu banco.
-            <br><br><br><br>
+            <br><br>
         </p>
         <img id="email" src="https://i.imgur.com/Ychfu6N.png" width="70px" height="70px">
         <img id="telefone" src="https://i.imgur.com/tmGxHme.png" width="60px" height="60px">
@@ -329,6 +361,7 @@
         <p id="githubtexto">
             github.com/CrowJoker12
         </p>
+        <div id="branco">
         <br><br><br><br>
     </section>
 </body>
