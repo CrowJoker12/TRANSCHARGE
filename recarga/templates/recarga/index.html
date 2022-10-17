@@ -232,256 +232,13 @@
         #branco{
             margin-top: 50px;
         }
-        @media screen and (max-width:650px) {
-            @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-            html {
-            scroll-behavior: smooth;
-            }
-            :target {
-            scroll-margin-top: 150px;
-            }
-            body{
-                background: #FFF;
-            }
-            #menu {
-                margin-top: -25px;
-                position: fixed;
-                background: #001b88;
-                color: #FFF;
-                height: 80px;
-                width: 600px;
-                padding-left: px;
-                border-radius: 0px;
-            }
-            #menu ul, #menu li {
-                margin: 0 auto;
-                padding: 0;
-                list-style: none
-            }
-            #menu ul {
-                margin-left: 227px;
-                margin-top: 17px;
-                width: 100%;
-            }
-            #menu li {
-                float: left;
-                display: inline;
-                position: relative;
-            }
-            #menu a {
-                display: block;
-                line-height: 63px;
-                padding: 0 18px;
-                text-decoration: none;
-                color: #fff;
-                font-size: 9px;
-                text-transform: uppercase;
-            }
-            #menu li a:hover {
-                color: #001b88;
-                background: #FFF;
-            }
-            #menu input {
-                display: none;
-                margin: 0;
-                padding: 0;
-                height: 45px;
-                width: 100%;
-                opacity: 0;
-                cursor: pointer
-            }
-            #menu label {
-                display: none;
-                line-height: 45px;
-                text-align: center;
-                position: absolute;
-                left: 35px
-            }
-            #menu label:before {
-                font-size: 1.6em;
-                content: "\2261";
-                margin-left: 20px;
-            }
-            #menu ul.sub-menus{
-                height: auto;
-                overflow: hidden;
-                width: 170px;
-                background: #444444;
-                position: absolute;
-                z-index: 99;
-                display: none;
-            }
-            #menu ul.sub-menus li {
-                display: block;
-                width: 100%;
-            }
-            #menu ul.sub-menus a {
-                color: #FFFFFF;
-                font-size: 16px;
-            }
-            #menu li:hover ul.sub-menus {
-                display: block
-            }
-            #menu ul.sub-menus a:hover{
-                background: #F2F2F2;
-                color: #444444;
-            }
-            #banner-esq{
-                width: 50px;
-                height: 100%;
-                background-color: #001b88;
-                position: fixed;
-                margin-top: 33px;
-            }
-            #banner-dir{
-                width: 60px;
-                height: 100%;
-                background-color: #001b88;
-                position: fixed;
-                margin-left: 535px;
-                margin-top: 54px;
-            }
-            #banner-bai{
-                width: 584px;
-                height: 60px;
-                background-color: #001b88;
-                position: fixed;
-                margin-top: 600px;
-            }
-            #info1{
-                color: #000;
-                margin-left: 80px;
-                text-align: justify;
-                width: 420px;
-                font-size: 15px;
-            }
-            #info3{
-                color: #000;
-                margin-left: 80px;
-                margin-top: -20px;
-                text-align: justify;
-                width: 400px;
-                font-size: 30px;
-            }
-            #info1titulo{
-                color: #000;
-                font-size: 30px;
-                margin-left: 80px;
-                margin-top: 5px;
-                width: 450px;
-            }
-            #info3titulo{
-                color: #000;
-                font-size: 50px;
-                margin-left: 80px;
-                margin-top: 200px;
-                width: 450px;
-            }
-            #erro{
-                color: #000;
-                margin-left: 80px;
-                margin-top: 50px;
-                text-align: justify;
-                width: 400px;
-                font-size: 15px;
-            }
-            #Cartaorecarga{
-                font-size: 40px;
-                margin-left: -10px;
-            }
-            #info5{
-                color: #000;
-                margin-left: 120px;
-                margin-top: 20px;
-                text-align: justify;
-                width: 350px;
-                font-size: 12px;
-            }
-            #info6{
-                color: #000;
-                margin-left: 120px;
-                margin-top: 20px;
-                text-align: justify;
-                width: 350px;
-                font-size: 12px;
-            }
-            #info7{
-                color: #000;
-                margin-left: 120px;
-                margin-top: 20px;
-                text-align: justify;
-                width: 350px;
-                font-size: 12px;
-            }
-            #info8{
-                color: #000;
-                margin-left: 120px;
-                margin-top: -15px;
-                text-align: justify;
-                width: 350px;
-                font-size: 12px;
-            }
-            #email{
-                margin-left: 120px;
-                margin-top: 10px;
-                width: 20px;
-                height: 20px;
-            }
-            #telefone{
-                margin-left: 100px;
-                margin-top: 50px;
-                width: 20px;
-                height: 20px;
-            }
-            #github{
-                margin-left: 100px;
-                margin-top: 50px;
-                width: 20px;
-                height: 20px;
-            }
-            #emailtexto{
-                margin-left: 145px;
-                margin-top: -19px;
-                font-size: 8px;
-            }
-            #telefonetexto{
-                margin-left: 270px;
-                margin-top: -35px;
-                font-size: 8px;
-            }
-            #githubtexto{
-                margin-left: 393px;
-                margin-top: -37px;
-                font-size: 8px;
-            }
-            #logo{
-                margin-left: 47px;
-                margin-top: 5px;
-                width: 150px;
-                height: 80px;
-            }
-            #botaorecarga{
-                color: #ffffff;
-                background-color: #001b88;
-                font-size: 20px;
-                border: 1px solid #001b88;
-                padding: 10px 20px;
-                text-transform: uppercase;
-                margin-top: 20px;
-            }
-            #botaorecarga:hover {
-                color: #001b88;
-                background-color: #ffffff;
-            }
-            .teste {
-                margin-left: -14px;
-            }
-            #branco{
-                margin-top: 50px;
-            }
-            #sessao3{
-                margin-top: -150px;
-            }
+        #pag1{
+            margin-top: -400px;
+            margin-left: 650px;
+        }
+        #pag2{
+            margin-top: -400px;
+            margin-left: 930px;
         }
     </style>
     <style>
@@ -527,6 +284,7 @@
             1° Selecione a ferramenta Recarga e Consulta de Saldo Online<br>
             2° Insira o seu N° de Cartão<br>
             3° Verifique o seu saldo<br>
+            <img id="pag1" src="https://i.imgur.com/LjpgHVQ.png" width="360" height="180">
             4º Se quiser, abra o app do seu banco em seu dispostivo móvel<br>
             5° Leia o código QR que aparecerá na tela<br>
             6º Insira a quantidade que você quer recarregar (R$10 ~ R$150)<br>
@@ -538,6 +296,8 @@
             com transcharge@gmail.com para cadastro ou mais informações.
         </p>
     </section>
+    
+    <img id="pag2" src="https://i.imgur.com/jclkTt5.png" width="360" height="180">
     <section id="sessao2">
         <p id="info3titulo">Recarga e Consulta de Saldo Online</p>
         <p id="info3">
