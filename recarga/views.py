@@ -14,5 +14,9 @@ def exibir_saldo(request, cliente_id):
                   {'cliente': cliente})
 
 
+def erro404(request, exception):
+    return render(request, 'recarga/404.html')
+
+
 def erro500(request):
     return render(request, 'recarga/500.html')

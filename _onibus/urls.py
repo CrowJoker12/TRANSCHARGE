@@ -22,4 +22,5 @@ urlpatterns = [
     path('',include('recarga.urls')),
 ]
 
+handler404 = 'recarga.views.erro404'
 handler500 = 'recarga.views.erro500'
